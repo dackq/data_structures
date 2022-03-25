@@ -28,6 +28,20 @@ LinkedList* create_linked_list () {
  */
 void push (LinkedList* list, int value) {
 	if (list->head == NULL) {
+		list->head = create_node(value, NULL);		
+		list->tail = list->head;
+		return;
+	}
+
+	list->head = create_node(value, list->head);
+	return;
+}
+
+/**
+ * Inserts a node containing the given value at the end of the list
+ */
+void add (LinkedList* list, int value) {
+	if (list->head == NULL) {
 		list->head = create_node(value, NULL);
 		list->tail = list->head;
 		return;
