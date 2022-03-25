@@ -52,20 +52,3 @@ void push (LinkedList* list, int value) {
 // 
 // }
 
-}
-
-int main () {
-	LinkedList* list = create_linked_list ();	
-	push (list, 1);
-	push (list, 2);
-	push (list, 3);
-
-	Node* current = NULL;
-	
-	while (current != NULL) {
-		current = pop (list);
-		printf("%d\n", current->value);
-	}
-
-	return 0;
-}
