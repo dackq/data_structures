@@ -1,16 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct {
-	int value;
-	void *next; 
-} Node;
-
-typedef struct {
-	Node *head;
-	Node *tail;
-	int length;
-} LinkedList;
+#include "linked_list.h"
 
 Node* create_node (int value, Node *next) {
 	Node* ptr = (Node*) malloc(sizeof(Node));
