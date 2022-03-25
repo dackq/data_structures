@@ -17,6 +17,7 @@ LinkedList* create_linked_list () {
 	return list;
 }
 
+// TODO - this should add at the head not the tail
 void push (LinkedList* list, int value) {
 	if (list->head == NULL) {
 		list->head = create_node(value, NULL);
