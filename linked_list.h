@@ -24,7 +24,7 @@ void push (LinkedList *list, int value);
 
 void add (LinkedList *list, int value);
 
-void add_at_index (LinkedList *list, int value, int index);
+int add_at_index (LinkedList *list, int value, int index);
 
 Node* get_node (LinkedList *list, int index);
 

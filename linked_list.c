@@ -75,8 +75,8 @@ Node* get_node(LinkedList* list, int index) {
 /**
  * TODO
  */
-Node* get_index(LinkedList *list, int value) {
-	return NULL;	
+int get_index(LinkedList *list, int value) {
+	return -1;	
 }
 
 /**
