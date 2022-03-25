@@ -22,4 +22,14 @@ LinkedList* create_linked_list ();
 
 void push (LinkedList *list, int value);
 
+void add (LinkedList *list, int value);
+
+void add_at_index (LinkedList *list, int value, int index);
+
+Node* get_node (LinkedList *list, int index);
+
+int contains (LinkedList *list, int value);
+
+int get_index (LinkedList *list, int value);
+
 Node* pop (LinkedList *list);
