@@ -52,6 +52,55 @@ void add (LinkedList* list, int value) {
 	return;
 }
 
+
+/**
+ * Returns the node found at the given index in the given list.
+ */
+Node* get_node(LinkedList* list, int index) {
+	Node* current = list->head;	
+	int count = 0;
+
+	while (current != NULL) {
+		if (count == index) {
+			return current;
+		}	
+		
+		current = current->next;
+		count++;
+	}
+
+	return current;
+}
+
+/**
+ * TODO
+ */
+Node* get_index(LinkedList *list, int value) {
+	return NULL;	
+}
+
+/**
+ * TODO
+ */
+int contains (LinkedList *list, int value) {
+	return 0;
+}
+
+/**
+ * Inserts a node containing the given value at the given index in the given list.
+ */
+int add_at_index (LinkedList* list, int value, int index) {
+	Node* new_node = create_node(value, NULL);
+	Node* node_before_index = get_node(list, index - 1);
+	// if no node is found at index, then it is not possible to add the node
+	if (node_before_index == NULL) { return 1; }
+
+	// add the node
+	new_node->next = node_before_index->next;
+	node_before_index->next = new_node;
+	return 0;
+}
+
 // Node* pop (LinkedList* list) {
 // 	// if list is empty
 // 	if (list->head == NULL) {
