@@ -5,16 +5,13 @@
 #                and linking                            #
 #########################################################
 
-all: main linked_list
+all: test
 
-linked_list.o: linked_list.c linked_list.h
-	clang -c linked_list.c
-
-test: test.c linked_list.o linked_list.h
-	clang test.c linked_list.o -o test
+test: test.c linked_list.c linked_list.h
+	clang test.c linked_list.c -o test
 
 clean: 
-	rm -rf *.o
+	rm -rf *.o *.dSYM
 
 clobber: clean
-	rm -rf linked_list
+	rm -rf linked_list test
