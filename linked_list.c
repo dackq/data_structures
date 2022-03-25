@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include "linked_list.h"
 
+/**
+ * Creates a new node
+ */
 Node* create_node (int value, Node *next) {
 	Node* ptr = (Node*) malloc(sizeof(Node));
 	ptr->value = value;
@@ -10,6 +13,9 @@ Node* create_node (int value, Node *next) {
 	return ptr;
 }
 
+/**
+ * Creates a new linked list
+ */
 LinkedList* create_linked_list () {
 	LinkedList* list = (LinkedList*) malloc(sizeof(LinkedList));	
 	list->head = NULL;
@@ -17,7 +23,9 @@ LinkedList* create_linked_list () {
 	return list;
 }
 
-// TODO - this should add at the head not the tail
+/**
+ * Inserts a node containing the given value at the beginning of the list
+ */
 void push (LinkedList* list, int value) {
 	if (list->head == NULL) {
 		list->head = create_node(value, NULL);
