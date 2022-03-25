@@ -29,26 +29,28 @@ void push (LinkedList* list, int value) {
 	return;
 }
 
-Node* pop (LinkedList* list) {
-	// if list is empty
-	if (list->head == NULL) {
-		return NULL;
-	}	
-
-	// if list is not empty then we will return the current head
-	// so go ahead and save it here
-	Node* node_to_return = list->head;
-
-	// if there is only one node in the list
-	if (list->head == list->tail) {
-		list->head = NULL;
-		list->tail = NULL;
-		return node_to_return;
-	}
-
-	// if there is more than one node
-	list->head = list->head->next;
-	return node_to_return;
+// Node* pop (LinkedList* list) {
+// 	// if list is empty
+// 	if (list->head == NULL) {
+// 		return NULL;
+// 	}	
+// 
+// 	// if list is not empty then we will return the current head
+// 	// so go ahead and save it here
+// 	Node* node_to_return = list->head;
+// 
+// 	// if there is only one node in the list
+// 	if (list->head == list->tail) {
+// 		list->head = NULL;
+// 		list->tail = NULL;
+// 		return node_to_return;
+// 	}
+// 
+// 	// if there is more than one node
+// 	list->head = list->head->next;
+// 	return node_to_return;
+// 
+// }
 
 }
 
